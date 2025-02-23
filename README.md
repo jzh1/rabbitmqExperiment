@@ -15,16 +15,16 @@
 ## 2 composer install 安装
 
 ## 3 通讯方式
-### hello world
-[send1Hello.php](send1Hello.php)  生产者
-[receive1Hello.php](receive1Hello.php)receive.php 消费者
+### 1、hello world
+* [send1Hello.php](send1Hello.php)  生产者
+* [receive1Hello.php](receive1Hello.php) 消费者
 
 都是单一的，一个生产者，一个消费者
 
-### work queue
-[send2work.php](send2work.php) 
-[receive2work1.php](receive2work1.php)
-[receive2work2.php](receive2work2.php)
+### 2、work queue
+* [send2work.php](send2work.php) 生产者
+* [receive2work1.php](receive2work1.php)消费者1
+* [receive2work2.php](receive2work2.php)消费者2
 
 **一个生产者，多个消费者；
 多个消费者需要一起启动，否则就和通讯方式1没有什么区别**
