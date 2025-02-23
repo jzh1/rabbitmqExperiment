@@ -18,6 +18,8 @@
 ## 2 composer install 安装
 
 ## 3 通讯方式
+不同的交换机类型，会对routingKey有不同的支持
+
 ### 1、hello world
 * [send1Hello.php](send1Hello.php)  生产者
 * [receive1Hello.php](receive1Hello.php) 消费者
@@ -37,11 +39,16 @@
 * 但是！ 加流量控制basic_qos + ack可以实现消费能力更强的消费更多的数据，否则的话有木桶效应
 
 ### 3、publish/subscribe
-通过构建exchange绑定多个队列（fanout类型的），实现把一个消息放到不同的队列，队列的消费者是一个（和通讯1一样的消费者不再实现）
+通过构建exchange（fanout类型的）绑定多个队列，实现把一个消息放到不同的队列，队列的消费者是一个（和通讯1一样的消费者不再实现）
 * [send3.php](send3.php) 生产者
 * [receive1Hello.php](receive1Hello.php) 消费者
 
-### 3、routing
-1. 生产者：在绑定Exchange和Queue时，需要指定好routingKey，同时在发送消息时，也指定routingKey，只有routingKey一致时，才会把指定的消息路由到指定的Queue
+### 4、routing
+1. 生产者：构建Exchange（direct类型的）在绑定Exchange和Queue时，需要指定好routingKey，同时在发送消息时，也指定routingKey，只有routingKey一致时，才会把指定的消息路由到指定的Queue
 2. 根据不同的routing key 链接不同的queue，实现根据routing发送到不同的queue
 3. **队列的消费者是一个（和通讯1一样的消费者不再实现）**
+
+### 5、topic
+构建Exchange（topic类型的）
+其中有两个特殊字符：*（相当于占位符），#（相当通配符）
+绑定和发送的时候会根据routingkey 进行通配符和占位符的匹配，更灵活了；
