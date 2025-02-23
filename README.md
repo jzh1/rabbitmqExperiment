@@ -42,5 +42,6 @@
 * [receive1Hello.php](receive1Hello.php) 消费者
 
 ### 3、routing
-根据不同的routing key 链接不同的queue，实现根据routing发送到不同的queue
-**队列的消费者是一个（和通讯1一样的消费者不再实现）**
+1. 生产者：在绑定Exchange和Queue时，需要指定好routingKey，同时在发送消息时，也指定routingKey，只有routingKey一致时，才会把指定的消息路由到指定的Queue
+2. 根据不同的routing key 链接不同的queue，实现根据routing发送到不同的queue
+3. **队列的消费者是一个（和通讯1一样的消费者不再实现）**
