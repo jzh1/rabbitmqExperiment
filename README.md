@@ -1,4 +1,9 @@
 ## 官方地址：https://www.rabbitmq.com/tutorials/tutorial-two-php
+## 环境
+1. Erlang 25
+2. rabbitmq 3.12
+3. 注意Erlang这个版本需要centos8+
+
 ## 1 新建立composer.json
 
 {
