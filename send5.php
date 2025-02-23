@@ -2,9 +2,9 @@
 require_once 'RabbitConnection.php';
 use PhpAmqpLib\Message\AMQPMessage;
 
-const EXCHANGE_NAME = 'exchange-topic';
-const QUEUE_NAME1 = 'topic1';
-const QUEUE_NAME2 = 'topic2';
+const EXCHANGE_NAME = 'exchange-topic2';
+const QUEUE_NAME1 = 'topic3';
+const QUEUE_NAME2 = 'topic4';
 const QUEUE_TYPE = 'topic';
 
 
