@@ -36,4 +36,7 @@
 * rabbitmq以轮询的方式分配给在线监听的若干队列（有例外情况）
 * 但是！ 加流量控制basic_qos + ack可以实现消费能力更强的消费更多的数据，否则的话有木桶效应
 
-
+### 3、publish/subscribe
+通过构建exchange绑定多个队列（fanout类型的），实现把一个消息放到不同的队列，队列的消费者是一个（和通讯1一样的消费者不再实现）
+* [send3.php](send3.php) 生产者
+* [receive1Hello.php](receive1Hello.php) 消费者
