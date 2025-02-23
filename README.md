@@ -40,3 +40,7 @@
 通过构建exchange绑定多个队列（fanout类型的），实现把一个消息放到不同的队列，队列的消费者是一个（和通讯1一样的消费者不再实现）
 * [send3.php](send3.php) 生产者
 * [receive1Hello.php](receive1Hello.php) 消费者
+
+### 3、routing
+根据不同的routing key 链接不同的queue，实现根据routing发送到不同的queue
+**队列的消费者是一个（和通讯1一样的消费者不再实现）**
