@@ -52,3 +52,7 @@
 构建Exchange（topic类型的）
 其中有两个特殊字符：*（相当于占位符），#（相当通配符）
 绑定和发送的时候会根据routingkey 进行通配符和占位符的匹配，更灵活了；
+
+### 
+[send6.php](send6.php)rebbitmq confirms确认(确认是否到达交换机)
+[send6-2.php](send6-2.php) rebbitmq return确认(确认是否到达队列)
