@@ -76,3 +76,4 @@ https://github.com/rabbitmq/rabbitmq-delayed-message-exchange/releases
 * [send8.php](send8.php) 生产者
 * [receive8.php](receive8.php) 消费者
 * 出队列时间会根据过期时间自动出队列，而不是顺序
+* 延迟队列有一定几率会有消息丢失（rabbitmq重启），如果对数据要求很高，可以考虑死信队列；
